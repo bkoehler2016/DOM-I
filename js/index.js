@@ -42,10 +42,6 @@ const siteContent = {
   }
 };
 
-/***********************************************
-                  Navigation
-***********************************************/
-
 // Example: Update the img src for the logo
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent.nav['img-src']);
@@ -61,7 +57,9 @@ ctaImage.src = 'img/header-img.png';
 const middleImage = document.getElementById('middle-img');
 middleImage.src = 'img/mid-page-accent.jpg';
 
-//navigation
+/***********************************************
+                  Navigation
+***********************************************/
 
 const navItems = document.querySelectorAll('a');
 let itemIncrement = 1;
@@ -69,7 +67,9 @@ const navList = navItems.forEach(cv => {
   return (cv.textContent = siteContent.nav[`nav-item-${itemIncrement++}`]);
 });
 
-// Header text
+/***********************************************
+                  Header Section
+***********************************************/
 
 const headerText = document.querySelector('h1');
 headerText.textContent = siteContent.cta.h1;
@@ -96,7 +96,9 @@ bodyContentParagraphs[2].textContent = mainContent['services-content'];
 bodyContentParagraphs[3].textContent = mainContent['product-content'];
 bodyContentParagraphs[4].textContent = mainContent['vision-content'];
 
-//Contact
+/***********************************************
+                  Content
+***********************************************/
 const contactSection = siteContent.contact;
 
 const contactH4 = document.querySelectorAll('.contact h4');
@@ -106,13 +108,17 @@ contactParagraph[0].textContent = contactSection.address;
 contactParagraph[1].textContent = contactSection.phone;
 contactParagraph[2].textContent = contactSection.email;
 
-// Footer
+/***********************************************
+                  Footer
+***********************************************/
 const footerShortcut = siteContent.footer;
 
 const copyright = document.querySelector('footer p');
 copyright.textContent = footerShortcut.copyright;
 
-//Task 3
+/***********************************************
+                  Task 3 adding Navigation
+***********************************************/
 
 navItems.forEach(cv => {
   return (cv.style.color = 'green');

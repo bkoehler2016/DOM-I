@@ -120,9 +120,11 @@ navItems.forEach(cv => {
 
 const frontNavItem = document.createElement('a');
 frontNavItem.textContent = 'Front Item';
+frontNavItem.href = '#';
 
 const backNavItem = document.createElement('a');
 backNavItem.textContent = 'Back Item';
+backNavItem.href = '#';
 
 const selectNav = document.querySelector('nav');
 

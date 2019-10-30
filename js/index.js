@@ -73,3 +73,7 @@ const navList = navItems.forEach(cv => {
 
 const headerText = document.querySelector('h1');
 headerText.textContent = siteContent.cta.h1;
+
+// Button
+const button = document.querySelector('button');
+button.textContent = siteContent.cta.button;

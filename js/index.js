@@ -87,6 +87,7 @@ featuresH4[1].textContent = mainContent['about-h4'];
 featuresH4[2].textContent = mainContent['services-h4'];
 featuresH4[3].textContent = mainContent['product-h4'];
 featuresH4[4].textContent = mainContent['vision-h4'];
+featuresH4[5].textContent = siteContent.contact['contact-h4'];
 
 const bodyContentParagraphs = document.querySelectorAll('p');
 bodyContentParagraphs[0].textContent = mainContent['features-content'];
@@ -99,7 +100,6 @@ bodyContentParagraphs[4].textContent = mainContent['vision-content'];
 const contactSection = siteContent.contact;
 
 const contactH4 = document.querySelectorAll('.contact h4');
-contactH4.textContent = contactSection['contact-h4'];
 
 const contactParagraph = document.querySelectorAll('.contact p');
 contactParagraph[0].textContent = contactSection.address;

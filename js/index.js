@@ -77,3 +77,57 @@ headerText.textContent = siteContent.cta.h1;
 // Button
 const button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
+
+// Main Content
+const mainContent = siteContent['main-content'];
+
+const featuresH4 = document.querySelectorAll('h4');
+featuresH4[0].textContent = mainContent['features-h4'];
+featuresH4[1].textContent = mainContent['about-h4'];
+featuresH4[2].textContent = mainContent['services-h4'];
+featuresH4[3].textContent = mainContent['product-h4'];
+featuresH4[4].textContent = mainContent['vision-h4'];
+
+const bodyContentParagraphs = document.querySelectorAll('p');
+bodyContentParagraphs[0].textContent = mainContent['features-content'];
+bodyContentParagraphs[1].textContent = mainContent['about-content'];
+bodyContentParagraphs[2].textContent = mainContent['services-content'];
+bodyContentParagraphs[3].textContent = mainContent['product-content'];
+bodyContentParagraphs[4].textContent = mainContent['vision-content'];
+
+//Contact
+const contactSection = siteContent.contact;
+
+const contactH4 = document.querySelectorAll('.contact h4');
+contactH4.textContent = contactSection['contact-h4'];
+
+const contactParagraph = document.querySelectorAll('.contact p');
+contactParagraph[0].textContent = contactSection.address;
+contactParagraph[1].textContent = contactSection.phone;
+contactParagraph[2].textContent = contactSection.email;
+
+// Footer
+const footerShortcut = siteContent.footer;
+
+const copyright = document.querySelector('footer p');
+copyright.textContent = footerShortcut.copyright;
+
+//Task 3
+
+navItems.forEach(cv => {
+  return (cv.style.color = 'green');
+});
+
+const frontNavItem = document.createElement('a');
+frontNavItem.textContent = 'Front Item';
+
+const backNavItem = document.createElement('a');
+backNavItem.textContent = 'Back Item';
+
+const selectNav = document.querySelector('nav');
+
+selectNav.prepend(frontNavItem);
+selectNav.appendChild(backNavItem);
+
+frontNavItem.style.color = 'green';
+backNavItem.style.color = 'green';

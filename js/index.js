@@ -97,7 +97,7 @@ bodyContentParagraphs[3].textContent = mainContent['product-content'];
 bodyContentParagraphs[4].textContent = mainContent['vision-content'];
 
 /***********************************************
-                  Content
+                  Contact
 ***********************************************/
 const contactSection = siteContent.contact;
 

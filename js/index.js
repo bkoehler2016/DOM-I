@@ -50,37 +50,26 @@ const siteContent = {
 let logo = document.getElementById('logo-img');
 logo.setAttribute('src', siteContent.nav['img-src']);
 
-// Add the navigation to the header
+// Task 1
 
-const nav = document.querySelectorAll('header nav a');
+// const mainTitle = document.querySelector('h1');
+// mainTitle.textContent = 'Did this work at all?';
 
-// Change the color of each navigation item from black to green
-nav.forEach(item => (item.style.color = 'green'));
+const ctaImage = document.getElementById('cta-img');
+ctaImage.src = 'img/header-img.png';
 
-nav[0].textContent = siteContent.nav['nav-item-1'];
-nav[1].textContent = siteContent.nav['nav-item-2'];
-nav[2].textContent = siteContent.nav['nav-item-3'];
-nav[3].textContent = siteContent.nav['nav-item-4'];
-nav[4].textContent = siteContent.nav['nav-item-5'];
-nav[5].textContent = siteContent.nav['nav-item-6'];
+const middleImage = document.getElementById('middle-img');
+middleImage.src = 'img/mid-page-accent.jpg';
 
-// Create two new elements
+//navigation
 
-const newNav = document.querySelector('nav');
+const navItems = document.querySelectorAll('a');
+let itemIncrement = 1;
+const navList = navItems.forEach(cv => {
+  return (cv.textContent = siteContent.nav[`nav-item-${itemIncrement++}`]);
+});
 
-const newNavItem1 = document.createElement('a');
-newNavItem1.textContent = 'Home';
-newNavItem1.href = '#';
-newNavItem1.style.color = 'green';
+// Header text
 
-const newNavItem2 = document.createElement('a');
-newNavItem2.textContent = 'Blog';
-newNavItem2.href = '#';
-newNavItem2.style.color = 'green';
-
-newNav.prepend(newNavItem1);
-newNav.appendChild(newNavItem2);
-
-/***********************************************
-                Call to Action
-***********************************************/
+const headerText = document.querySelector('h1');
+headerText.textContent = siteContent.cta.h1;

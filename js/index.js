@@ -68,7 +68,7 @@ const navList = navItems.forEach(cv => {
 });
 
 /***********************************************
-                  Header Section
+                  Header Section Task 2
 ***********************************************/
 
 const headerText = document.querySelector('h1');

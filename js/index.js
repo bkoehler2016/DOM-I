@@ -104,7 +104,7 @@ const contactSection = siteContent.contact;
 const contactH4 = document.querySelectorAll('.contact h4');
 
 const contactParagraph = document.querySelectorAll('.contact p');
-contactParagraph[0].innerHTML = '123 Way 456 Street </br> </br>Somewhere, USA';
+contactParagraph[0].innerHTML = '123 Way 456 Street </br>Somewhere, USA';
 contactParagraph[1].textContent = contactSection.phone;
 contactParagraph[2].textContent = contactSection.email;
 

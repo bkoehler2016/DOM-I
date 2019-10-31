@@ -63,8 +63,24 @@ middleImage.src = 'img/mid-page-accent.jpg';
 
 const navItems = document.querySelectorAll('a');
 let itemIncrement = 1;
-const navList = navItems.forEach(cv => {
-  return (cv.textContent = siteContent.nav[`nav-item-${itemIncrement++}`]);
+const navList = navItems.forEach(link => {
+  return (link.textContent = siteContent.nav[`nav-item-${itemIncrement++}`]);
+});
+
+navItems.forEach(link => {
+  link.style.color = 'green';
+  link.onmouseover = function() {
+    mouseover();
+  };
+  link.onmouseout = function() {
+    mouseOut();
+  };
+  function mouseover() {
+    link.style.backgroundColor = 'red';
+  }
+  function mouseOut() {
+    link.style.backgroundColor = 'white';
+  }
 });
 
 /***********************************************
@@ -120,10 +136,6 @@ copyright.textContent = footerShortcut.copyright;
                   Task 3 adding Navigation
 ***********************************************/
 
-navItems.forEach(cv => {
-  return (cv.style.color = 'green');
-});
-
 const frontNavItem = document.createElement('a');
 frontNavItem.textContent = 'Front Item';
 frontNavItem.href = '#';
@@ -137,5 +149,31 @@ const selectNav = document.querySelector('nav');
 selectNav.prepend(frontNavItem);
 selectNav.appendChild(backNavItem);
 
+//first item
 frontNavItem.style.color = 'green';
+frontNavItem.onmouseover = function() {
+  FrontmouseOver();
+};
+frontNavItem.onmouseout = function() {
+  FrontmouseOut();
+};
+function FrontmouseOver() {
+  frontNavItem.style.backgroundColor = 'red';
+}
+function FrontmouseOut() {
+  frontNavItem.style.backgroundColor = 'white';
+}
+// last item
 backNavItem.style.color = 'green';
+backNavItem.onmouseover = function() {
+  mouseOver();
+};
+backNavItem.onmouseout = function() {
+  mouseOut();
+};
+function mouseOver() {
+  backNavItem.style.backgroundColor = 'red';
+}
+function mouseOut() {
+  backNavItem.style.backgroundColor = 'white';
+}

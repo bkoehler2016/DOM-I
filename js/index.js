@@ -166,14 +166,14 @@ function FrontmouseOut() {
 // last item
 backNavItem.style.color = 'green';
 backNavItem.onmouseover = function() {
-  mouseOver();
+  BackmouseOver();
 };
 backNavItem.onmouseout = function() {
-  mouseOut();
+  BackmouseOut();
 };
-function mouseOver() {
+function BackmouseOver() {
   backNavItem.style.backgroundColor = 'lightblue';
 }
-function mouseOut() {
+function BackmouseOut() {
   backNavItem.style.backgroundColor = 'white';
 }

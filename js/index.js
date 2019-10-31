@@ -71,8 +71,8 @@ const navList = navItems.forEach(cv => {
                   Header Section Task 2
 ***********************************************/
 
-const headerText = document.querySelector('h1');
-headerText.textContent = siteContent.cta.h1;
+const headerText = document.querySelector('.cta-text h1');
+headerText.innerHTML = siteContent.cta.h1.replace(/\s/g, '</br>');
 
 // Button
 const button = document.querySelector('button');
@@ -104,7 +104,7 @@ const contactSection = siteContent.contact;
 const contactH4 = document.querySelectorAll('.contact h4');
 
 const contactParagraph = document.querySelectorAll('.contact p');
-contactParagraph[0].textContent = contactSection.address;
+contactParagraph[0].innerHTML = '123 Way 456 Street </br> </br>Somewhere, USA';
 contactParagraph[1].textContent = contactSection.phone;
 contactParagraph[2].textContent = contactSection.email;
 

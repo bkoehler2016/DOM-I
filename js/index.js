@@ -70,13 +70,13 @@ const navList = navItems.forEach(link => {
 navItems.forEach(link => {
   link.style.color = 'green';
   link.onmouseover = function() {
-    mouseover();
+    mouseOver();
   };
   link.onmouseout = function() {
     mouseOut();
   };
-  function mouseover() {
-    link.style.backgroundColor = 'red';
+  function mouseOver() {
+    link.style.backgroundColor = 'lightblue';
   }
   function mouseOut() {
     link.style.backgroundColor = 'white';
@@ -158,7 +158,7 @@ frontNavItem.onmouseout = function() {
   FrontmouseOut();
 };
 function FrontmouseOver() {
-  frontNavItem.style.backgroundColor = 'red';
+  frontNavItem.style.backgroundColor = 'lightblue';
 }
 function FrontmouseOut() {
   frontNavItem.style.backgroundColor = 'white';
@@ -172,7 +172,7 @@ backNavItem.onmouseout = function() {
   mouseOut();
 };
 function mouseOver() {
-  backNavItem.style.backgroundColor = 'red';
+  backNavItem.style.backgroundColor = 'lightblue';
 }
 function mouseOut() {
   backNavItem.style.backgroundColor = 'white';

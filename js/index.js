@@ -15,21 +15,16 @@ const siteContent = {
   },
   'main-content': {
     'features-h4': 'Features',
-    'features-content':
-      'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+    'features-content': 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
     'about-h4': 'About',
-    'about-content':
-      'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+    'about-content': 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
     'middle-img-src': 'img/mid-page-accent.jpg',
     'services-h4': 'Services',
-    'services-content':
-      'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+    'services-content': 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
     'product-h4': 'Product',
-    'product-content':
-      'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
+    'product-content': 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.',
     'vision-h4': 'Vision',
-    'vision-content':
-      'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+    'vision-content': 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
   },
   contact: {
     'contact-h4': 'Contact',
@@ -69,15 +64,17 @@ const navList = navItems.forEach(link => {
 
 navItems.forEach(link => {
   link.style.color = 'green';
-  link.onmouseover = function() {
+  link.onmouseover = function () {
     mouseOver();
   };
-  link.onmouseout = function() {
+  link.onmouseout = function () {
     mouseOut();
   };
+
   function mouseOver() {
     link.style.backgroundColor = 'lightblue';
   }
+
   function mouseOut() {
     link.style.backgroundColor = 'white';
   }
@@ -88,7 +85,7 @@ navItems.forEach(link => {
 ***********************************************/
 
 const headerText = document.querySelector('.cta-text h1');
-headerText.innerHTML = siteContent.cta.h1.replace(/\s/g, '</br>');
+headerText.innerText = `Dom \n is \n Awesome \n`;
 
 // Button
 const button = document.querySelector('button');
@@ -117,10 +114,10 @@ bodyContentParagraphs[4].textContent = mainContent['vision-content'];
 ***********************************************/
 const contactSection = siteContent.contact;
 
-const contactH4 = document.querySelectorAll('.contact h4');
+
 
 const contactParagraph = document.querySelectorAll('.contact p');
-contactParagraph[0].innerHTML = '123 Way 456 Street </br>Somewhere, USA';
+contactParagraph[0].innerText = `123 Way 456 Street \n Somewhere, USA`;
 contactParagraph[1].textContent = contactSection.phone;
 contactParagraph[2].textContent = contactSection.email;
 
@@ -151,29 +148,33 @@ selectNav.appendChild(backNavItem);
 
 //first item
 frontNavItem.style.color = 'green';
-frontNavItem.onmouseover = function() {
+frontNavItem.onmouseover = function () {
   FrontmouseOver();
 };
-frontNavItem.onmouseout = function() {
+frontNavItem.onmouseout = function () {
   FrontmouseOut();
 };
+
 function FrontmouseOver() {
   frontNavItem.style.backgroundColor = 'lightblue';
 }
+
 function FrontmouseOut() {
   frontNavItem.style.backgroundColor = 'white';
 }
 // last item
 backNavItem.style.color = 'green';
-backNavItem.onmouseover = function() {
+backNavItem.onmouseover = function () {
   BackmouseOver();
 };
-backNavItem.onmouseout = function() {
+backNavItem.onmouseout = function () {
   BackmouseOut();
 };
+
 function BackmouseOver() {
   backNavItem.style.backgroundColor = 'lightblue';
 }
+
 function BackmouseOut() {
   backNavItem.style.backgroundColor = 'white';
 }

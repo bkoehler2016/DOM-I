@@ -63,7 +63,7 @@ middleImage.src = 'img/mid-page-accent.jpg';
 
 const navItems = document.querySelectorAll('a');
 let itemIncrement = 1;
-const navList = navItems.forEach(link => {
+navItems.forEach(link => {
   return (link.textContent = siteContent.nav[`nav-item-${itemIncrement++}`]);
 });
 
